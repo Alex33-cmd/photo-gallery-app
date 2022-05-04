@@ -1,14 +1,10 @@
 <template>
-    <v-card class="overflow-hidden">
+    <div>
       <v-app-bar
-        absolute
         color="#6A76AB"
         dark
-        shrink-on-scroll
-        prominent
         src="https://picsum.photos/1920/1080?random"
         fade-img-on-scroll
-        scroll-target="#scrolling-techniques-3"
       >
         <template v-slot:img="{ props }">
           <v-img
@@ -29,23 +25,24 @@
   
         <template v-slot:extension>
           <v-tabs align-with-title>
-            <v-tab>Digital</v-tab>
-            <v-tab>Film</v-tab>
-            <v-tab>Artwork</v-tab>
+            <v-tab to="/">Main</v-tab>
+            <v-tab to="/digital">digital</v-tab>
+            <v-tab to="/film">Film</v-tab>
+            <v-tab to="/artwork">Artwork</v-tab>
           </v-tabs>
         </template>
       </v-app-bar>
-      <v-sheet
-        id="scrolling-techniques-3"
-        class="overflow-y-auto"
-        max-height="600"
-      >
-        <v-container style="height: 1000px;"></v-container>
-      </v-sheet>
-    </v-card>
+    </div>
 </template>
 
 <script>
 export default {
 };
 </script>
+
+<style scoped>
+a {
+  text-decoration: none;
+  color: inherit;
+}
+</style>

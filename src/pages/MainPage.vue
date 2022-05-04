@@ -1,6 +1,6 @@
 <template>
   <div>
-      Digital Photography
+      Main Page
   </div>
 </template>
 

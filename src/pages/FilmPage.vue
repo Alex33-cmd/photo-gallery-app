@@ -1,6 +1,7 @@
 <template>
-  <v-app>
-  </v-app>
+  <div>
+      Film Photography
+  </div>
 </template>
 
 <script>
