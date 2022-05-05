@@ -1,10 +1,12 @@
 <template>
   <div>
       <h1>Digital Photography</h1>
-      <DigitalPhoto 
-        v-for="photo in photos" v-bind:key="photo.id"
-        v-bind:photo="photo"
-      />
+      <v-row>
+        <DigitalPhoto 
+          v-for="photo in photos" v-bind:key="photo.id"
+          v-bind:photo="photo"
+        />
+      </v-row>
   </div>
 </template>
 
@@ -20,8 +22,13 @@ export default {
     photos: []
   }),
   mounted() {
-    axios.get('https://jsonplaceholder.typicode.com/photos?_limit=10')
-    .then(response => this.photos = response.data)
+    this.fetchPhoto()
+  },
+  methods: {
+    fetchPhoto() {
+      axios.get('https://jsonplaceholder.typicode.com/photos?_limit=16')
+      .then(response => this.photos = response.data)
+    }
   }
 };
 </script>
