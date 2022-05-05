@@ -15,7 +15,7 @@
   
         <v-app-bar-nav-icon></v-app-bar-nav-icon>
   
-        <v-app-bar-title>Title</v-app-bar-title>
+        <v-app-bar-title>photo-gallery-app</v-app-bar-title>
   
         <v-spacer></v-spacer>
   

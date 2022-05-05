@@ -1,8 +1,8 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import MainPage from "@/pages/MainPage";
-import DigitalPage from "@/pages/DigitalPage";
+import MainPage from "@/views/MainPage";
+import DigitalPage from "@/views/DigitalPage";
 
 Vue.use(VueRouter);
 
@@ -17,11 +17,11 @@ const routes = [
   },
   {
     path: "/film",
-    component: () => import("./pages/FilmPage"),
+    component: () => import("./views/FilmPage"),
   },
   {
     path: "/artwork",
-    component: () => import("./pages/ArtworkPage"),
+    component: () => import("./views/ArtworkPage"),
   },
 ];
 
