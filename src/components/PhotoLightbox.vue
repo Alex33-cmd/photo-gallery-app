@@ -1,0 +1,49 @@
+<template>
+        <v-dialog
+            v-model="lightboxVisible"
+            transition="dialog-bottom-transition"
+            max-width="600"
+        >
+            <v-card>
+                <v-toolbar
+                color="primary"
+                dark
+                >Opening from the bottom</v-toolbar>
+                <v-card-title>{{photo.title}}</v-card-title>
+                <v-card-text>
+                    <v-img
+                        v-bind:src="photo.url"
+                    />
+                </v-card-text>
+            </v-card>
+        </v-dialog>
+</template>
+
+<script>
+export default {
+    data: () => ({
+        lightboxVisible: false
+    }),
+    props: {
+        photo: {
+            type: Object,
+            required: true
+        },
+        value: {
+            type: Boolean,
+            default: false
+        }
+    },
+    created(){
+        this.lightboxVisible = this.value;
+    },
+    watch: {
+        value(newValue) {
+            this.lightboxVisible = newValue
+        },
+        lightboxVisible(newValue){
+            this.$emit('input', newValue)
+        }
+    }
+};
+</script>

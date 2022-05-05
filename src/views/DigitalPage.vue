@@ -4,22 +4,28 @@
       <v-row>
         <DigitalPhoto 
           v-for="photo in photos" v-bind:key="photo.id"
-          v-bind:photo="photo"
+          :photo="photo"
+          @openPhoto="openPhoto"
         />
       </v-row>
+      <PhotoLightbox :photo="currentPhoto" v-model="lightboxVisible"/>
   </div>
 </template>
 
 <script>
 import DigitalPhoto from "@/components/DigitalPhoto.vue"
+import PhotoLightbox from "@/components/PhotoLightbox.vue"
 import axios from "axios";
 
 export default {
   components: {
-    DigitalPhoto
+    DigitalPhoto,
+    PhotoLightbox
   },
   data: () => ({
-    photos: []
+    photos: [],
+    currentPhoto: {},
+    lightboxVisible: false
   }),
   mounted() {
     this.fetchPhoto()
@@ -28,7 +34,12 @@ export default {
     fetchPhoto() {
       axios.get('https://jsonplaceholder.typicode.com/photos?_limit=16')
       .then(response => this.photos = response.data)
+    },
+    openPhoto(photo) {
+      this.currentPhoto = photo
+      this.lightboxVisible = !this.lightboxVisible
     }
   }
+  
 };
 </script>
