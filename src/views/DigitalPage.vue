@@ -1,6 +1,6 @@
 <template>
   <div>
-      <h1>Digital Photography</h1>
+      <h1 class="pa-4">Digital Photography</h1>
       <v-row>
         <DigitalPhoto 
           v-for="photo in photos" v-bind:key="photo.id"
@@ -32,7 +32,8 @@ export default {
   },
   methods: {
     fetchPhoto() {
-      axios.get('https://jsonplaceholder.typicode.com/photos?_limit=16')
+      // axios.get('https://jsonplaceholder.typicode.com/photos?_limit=16')
+      axios.get('https://picsum.photos/v2/list?limit=20')
       .then(response => this.photos = response.data)
     },
     openPhoto(photo) {

@@ -1,15 +1,30 @@
 <template>
-  <v-col cols="4">
-      <v-card height="450" @click="openPhoto">
-          <v-card-title>{{photo.title}}</v-card-title>
-          <v-card-text>
-              <v-img
-                width="200"
-                v-bind:src="photo.url"
-              />
-          </v-card-text>
-      </v-card>
-  </v-col>
+    <v-col 
+     ma-4
+    >
+        <v-card
+        class="mx-auto"
+        max-width="250"
+        @click="openPhoto"
+        >
+            <v-img
+            max-height="167"
+            class="white--text align-end"
+            v-bind:src="photo.download_url"
+            >
+                <v-card-title>{{photo.id}}</v-card-title>
+            </v-img>
+
+            <v-card-subtitle class="pb-0">
+                {{photo.author}}
+            </v-card-subtitle>
+
+            <v-card-text class="text--primary">
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </v-card-text>
+        </v-card>
+
+    </v-col>
 </template>
 
 <script>

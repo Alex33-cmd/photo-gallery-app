@@ -2,17 +2,17 @@
         <v-dialog
             v-model="lightboxVisible"
             transition="dialog-bottom-transition"
-            max-width="600"
+            max-width="1000"
         >
             <v-card>
                 <v-toolbar
                 color="primary"
                 dark
-                >Opening from the bottom</v-toolbar>
-                <v-card-title>{{photo.title}}</v-card-title>
+                >{{photo.author}}</v-toolbar>
                 <v-card-text>
                     <v-img
-                        v-bind:src="photo.url"
+                    max-height="1000"
+                        v-bind:src="photo.download_url"
                     />
                 </v-card-text>
             </v-card>
