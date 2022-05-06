@@ -1,21 +1,21 @@
 <template>
     <div>
       <v-app-bar
-        color="#6A76AB"
+        color="#78909C"
         dark
-        src="https://picsum.photos/1920/1080?random"
         fade-img-on-scroll
       >
         <template v-slot:img="{ props }">
           <v-img
             v-bind="props"
-            gradient="to top right, rgba(100,115,201,.7), rgba(25,32,72,.7)"
+            gradient="to top right, #455A64, #90A4AE"
           ></v-img>
         </template>
   
-        <v-app-bar-nav-icon></v-app-bar-nav-icon>
+        <!-- <v-app-bar-nav-icon></v-app-bar-nav-icon> -->
+        <v-spacer></v-spacer>
   
-        <v-app-bar-title>photo-gallery-app</v-app-bar-title>
+        <v-app-bar-title><h1>Gallery</h1></v-app-bar-title>
   
         <v-spacer></v-spacer>
   

@@ -1,7 +1,7 @@
 <template>
-  <div>
-      <h1 class="pa-4">Digital Photography</h1>
-      <v-row>
+  <div class="blue-grey darken-4">
+      <h1 class="pa-4 white--text" >Digital Photography</h1>
+      <v-row class="ma-2">
         <DigitalPhoto 
           v-for="photo in photos" v-bind:key="photo.id"
           :photo="photo"

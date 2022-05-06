@@ -3,7 +3,7 @@
      ma-4
     >
         <v-card
-        class="mx-auto"
+        class="mx-auto blue-grey darken-2"
         max-width="250"
         @click="openPhoto"
         >
@@ -15,11 +15,11 @@
                 <v-card-title>{{photo.id}}</v-card-title>
             </v-img>
 
-            <v-card-subtitle class="pb-0">
+            <v-card-subtitle class="pb-0 white--text">
                 {{photo.author}}
             </v-card-subtitle>
 
-            <v-card-text class="text--primary">
+            <v-card-text class="white--text">
                 <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
             </v-card-text>
         </v-card>

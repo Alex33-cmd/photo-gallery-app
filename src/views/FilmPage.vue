@@ -1,6 +1,6 @@
 <template>
-  <div>
-      Film Photography
+  <div class="blue-grey darken-4">
+      <h1 class="pa-4 white--text">Film Photography</h1>
   </div>
 </template>
 

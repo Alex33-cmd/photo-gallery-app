@@ -6,7 +6,7 @@
         >
             <v-card>
                 <v-toolbar
-                color="primary"
+                color="#78909C"
                 dark
                 >{{photo.author}}</v-toolbar>
                 <v-card-text>
