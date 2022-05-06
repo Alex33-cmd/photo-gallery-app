@@ -4,11 +4,13 @@
         color="#78909C"
         dark
         fade-img-on-scroll
+        prominent
+        src="https://picsum.photos/1920/1080?random"
       >
         <template v-slot:img="{ props }">
           <v-img
             v-bind="props"
-            gradient="to top right, #455A64, #90A4AE"
+            gradient="to top right, rgb(69,90,100, 0.7), rgba(144,164,174, 0.7)"  
           ></v-img>
         </template>
   
